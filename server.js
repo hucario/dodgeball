@@ -1,10 +1,13 @@
 const express = require('express');
-const layouts = require('express-layouts');
-
-
+const layouts = require('express-ejs-layouts');
 
 const app = express()
 const port = process.env.PORT
+
+app.set('view engine', 'ejs');
+ 
+app.use(expressLayouts);
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
