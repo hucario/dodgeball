@@ -6,7 +6,7 @@ const port = process.env.PORT
 
 app.set('view engine', 'ejs');
  
-app.use(expressLayouts);
+app.use(layouts);
 
 
 app.get('/', (req, res) => {
