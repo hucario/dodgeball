@@ -10,7 +10,7 @@ app.use(expressLayouts);
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.render('test');
   console.log('sent thing :)');
 
 })
