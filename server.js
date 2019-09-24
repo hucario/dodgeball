@@ -108,7 +108,7 @@ if (process.argv[2]=='-hport') {
 	}
 } else {
 	try {
-		var server = app.listen("80",onStartup);
+		var server = app.listen(process.env.PORT,onStartup);
 	} catch (data) {
 		console.log(data);
 	}
