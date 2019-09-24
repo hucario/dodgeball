@@ -1,0 +1,169 @@
+body {
+	background: linear-gradient(90deg,red,orange,yellow,green,blue,purple);
+	font-family: "DejaVu Sans", "Roboto", "Sans-Serif";
+}
+
+.content {
+
+	position: fixed;
+	background-color: white;
+	
+	top: 5%;
+	left: 5%;
+	right: 5%;
+	bottom: 5%;
+	
+	border-radius: 10px;
+
+}
+
+.column {
+	display: block;
+	float: left;
+	width: 50%;
+}
+
+
+.textarea {
+
+	
+}
+
+
+.field {
+	position: fixed;
+	top: 5%;
+	left: 5%;
+	width: 30%;
+	height: 100%;
+	bottom: unset;
+	background-color: whitesmoke;
+	border-radius: unset;
+	border-top-left-radius: 10px;
+	border-bottom: black 1px solid;
+}
+
+.outerlist1 {
+
+width: 30%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+border-right: black 1px solid;
+
+}
+
+.outerlist2 {
+	
+	position: fixed;
+	
+	top: 51%;
+	bottom: 5%;
+	left: 35.1%;
+	right: 5%;
+	
+
+	
+	margin: 0px;
+	padding: 0px;
+	
+	transition: top 500ms;
+	
+}
+
+
+.listing {
+	
+	width: 100%;
+	height: 30%;
+	border-bottom: black 1px solid;
+	
+	transition: height 500ms, opacity 10000ms;
+	
+}
+
+.listingplayer {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	border-right: black 1px solid;
+	float:left;
+}
+
+.playerInfo {
+
+	display: block;
+	height:100%;
+	
+	font-size: 30px;
+	
+	float:right;
+
+}
+
+
+.outerCSS {
+position: fixed;
+top: 5%;
+left: 35%;
+right: 5%;
+height: 0%;
+margin: 0px;
+padding: 0px;
+float: right;
+border: white 0px solid;
+border-bottom: black 1px solid;
+border-left: black 1px solid;
+transition: height 500ms;
+
+
+}
+
+.css {
+margin: 0px;
+resize: none;
+font-family: monospace;
+
+height: 90%;
+width: 100%;
+
+border: 0px;
+border-top: black 1px solid;
+
+padding: 10px;
+
+}
+
+.cstop {
+
+	margin: 0px;
+	padding: 0px;
+	padding-left: 10px;
+	
+	height: 10px;
+	width: 100%;
+
+}
+
+
+
+.msg {
+	display: inline;
+	position: fixed;
+	top: -5%;
+	left: 0%;
+	right: 0%;
+	
+	text-align: center;
+	
+	background-color: lightgreen;
+	
+	z-index: 15303055328;
+	
+	transition: top 500ms;
+
+}
+
+
+
+

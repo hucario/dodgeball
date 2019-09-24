@@ -1,0 +1,55 @@
+ <%- contentFor("main") %>
+	<style id='cs'></style>
+        <title>dodgeball</title>
+        <div class="field">
+			<div class="player" id="player">
+				<input class="namer" placeholder='You' onsubmit="namesubmit(); return false;"></input>
+            </div>
+        </div>
+        <div class='boss'>
+        	<h1>Random boss: <span class='bossname'> this hasn't been filled yet, nice</span></h1>
+			<h2>You now have health.</h2>
+			<h3>Land 10 hits on the boss to win.</h3>
+
+        </div>
+        <div class='info'>
+                	<a href='#' class='o'>On mobile? Click here.</a><br>
+        	<h1>Player information</h1>
+        	<hr>
+        	<br>
+        	Name: <span class='namedisplay'></span><br>
+        	Facing: <span class='fac'>up</span><br>
+        	X: <span class='x'>0</span><br>
+        	Y:  <span class='y'>0</span><br>
+        	
+        	
+        	<br><hr><br>
+        	<span class='score'>Score: 0</span><br>
+        	<span class='hit'>Amount of times hit: 0</span><br>
+        	<span class='sent'>Amount of projectiles sent: 0</span><br>
+        	<span class='kdr'>Score/hit ratio: 0</span><br>
+        	<span class='acc'>Accuracy: 0%</span><br>
+        	
+        	<br><hr><br>
+        	
+
+        	
+        </div>
+
+		<div class='mobutts'>
+        	<input class="name2" placeholder='You'></input>
+        	<div class="a score2">Score: 0</div>
+        	<div class="a hit2">Times hit: 0</div>
+        	<div class="a buttdown">Down</div>
+        	<div class="a buttup">Up</div>
+        	<div class="a buttleft">Left</div>
+        	<div class="a buttright">Right</div>
+        	<div class="a throwbutt">Throw</div>
+        	
+        	
+        </div>
+
+
+		<script src="/index/client.js"></script>
+
+

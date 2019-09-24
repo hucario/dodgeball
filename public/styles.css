@@ -1,0 +1,394 @@
+/*
+
+in before this is 400 lines of redundant styles
+
+*/
+
+a {
+	color:black;
+}
+
+a:visited {
+	color:black;
+}
+
+a:focus {
+	color:black;
+}
+
+body {
+	background-color: black;
+	color: black;
+	font-family: "DejaVu Sans", "Roboto", "Sans-Serif";
+	user-select: none;
+}
+
+
+/* start of game styles */
+
+.field {
+	position: absolute;
+
+	background-color: white;
+	top: 0%;
+	left: 1%;
+	right: 30%;
+	bottom: 0%;
+	
+	border-radius: 10px;
+	
+	overflow: hidden;
+	
+	transition: height 500ms, width 500ms, left 500ms, right 500ms, top 500ms, bottom 500ms;
+}
+
+.boss {
+
+	position: fixed;
+	left:30%;
+	right:30%;
+	top:-50%;
+	height: auto;
+	background-color:red;
+	color:white;
+	
+	text-align:center;
+	opacity: 0.5;
+	transition: top 1000ms;
+	
+	border-radius: 50px;
+	
+	z-index:1000000;
+};
+
+
+
+.player {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	color: black;
+	background-color: lightgreen;
+	width: 10%;
+	height: 10%;
+
+	font-size: 30px;
+	padding: 0px;
+	
+	/*border: solid green 1px;*/
+
+
+	transition: top 500ms, left 500ms, transform 200ms;
+	
+	animation: in 500ms;
+	
+	z-index: 100;
+}
+
+#player {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	color: black;
+	background-color: lightgreen;
+	width: 10%;
+	height: 10%;
+
+	font-size: 30px;
+	padding: 0px;
+	
+	/*border: solid green 1px;*/
+
+
+	transition: top 500ms, left 500ms, transform 200ms;
+	
+	animation: in 500ms;
+	
+	z-index: 100;
+}
+
+@keyframes in {
+0% {top:-500%;}
+100% {top: 50%;}
+}
+
+.health {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	width: 100px;
+	height: 100px;
+	background-color: pink;
+	border-radius: 10px;
+
+	display: flex;
+	align-items: center;
+	
+	text-align: center;
+}
+
+.innerHealth {
+	width: 100%;
+	font-size: 3em;
+	text-align: center;
+}
+
+.otherPlayer {
+
+	position: absolute;
+	color: black;
+	background-color: pink;
+	width: 10%;
+	height: 10%;
+
+	font-size: 15px;
+	padding: 0px;
+	
+	/*border: solid red 1px;*/
+
+	animation: in 500ms;
+
+
+	transition: top 500ms, left 500ms, transform 200ms;
+	
+	z-index:99;
+}
+
+.yourProjectile {
+	background-color: black;
+	position: absolute;
+	
+	width: 50px;
+	height: 50px;
+	
+	transition: top 500ms, left 500ms, transform 500ms;
+	
+}
+
+.projectile {
+	background-color: red;
+	position: absolute;
+	
+	width: 5%;
+	height: 5%;
+	
+	transition: top 500ms linear, left 500ms linear, transform 500ms;
+	z-index: 1;
+}
+
+.deadish {
+	opacity: 1;
+	transition: opacity 10000ms;
+}
+
+.namer {
+	border: none;
+	background-color: rgb(231, 231, 231);
+	width: 100%;
+	position: relative;
+	top: 40px;
+	height: 20px;
+	line-height: 20px;
+	outline-width: 0px;
+	border-radius: 10px;
+	padding-left: 20px;
+}
+
+.namer:focus {
+	outline-style: none;
+	outline-width: 0px;
+	outline-color: white;
+}
+
+.name2 {
+
+	position: absolute;
+	right: 67%;
+	display: block;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	top: 67%;
+
+}
+
+.name2:focus {
+	outline-style: none;
+	outline-width: 0px;
+	outline-color: white;
+}
+
+/* end of inner game styles */
+
+.info {
+	position: absolute;
+	left: 71%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	
+	padding: 1%;
+	padding-left: 2%;
+	
+	border-radius: 10px;
+	
+	background-color: white;
+}
+
+.o {
+	position:absolute;
+	cursor: default;
+	z-index:5000;
+	transition: opacity 500ms;
+}
+
+.small {
+	font-size: 8px;
+}
+
+.mobutts {
+	/* mobile buttons */
+	
+
+	
+	position:absolute;
+	left: 71%;
+	right: 0%;
+	top: 56%;
+	bottom: 0%;
+	
+	border-radius: 10px;
+	padding: 10px;
+	
+	background-color:lightgreen;
+	
+	opacity: 0;
+	
+	transition: opacity 1000ms, left 500ms;
+	
+}
+
+.a {
+	line-height:100px;
+	user-select: none;
+	font-size: 30px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	
+}
+
+
+.buttdown {
+	
+	position: absolute;
+	right: 35%;
+	display: block;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	top: 67%;
+
+}
+
+.buttup {
+
+	position: absolute;
+	right: 35%;
+	display: block;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	top: 3%;
+
+}
+
+.buttleft {
+	position: absolute;
+	right: 67%;
+	display: block;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	top: 35%;
+}
+
+.buttright {
+	position: absolute;
+	right: 3%;
+	display: block;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	top: 35%;
+}
+
+.score2 {
+	position: absolute;
+	right: 67%;
+	display: block;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	top: 3%;
+}
+
+.hit2 {
+	position: absolute;
+	right: 3%;
+	display: block;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	top: 3%;
+}
+
+
+.throwbutt {
+	position: absolute;
+	right: 35%;
+	display: block;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	top: 35%;
+}
+
+
+.footer {
+	position: fixed;
+	font-size: 1em;
+	bottom: 0%;
+	left:5%;
+	opacity:0;
+	transition: opacity 500ms;
+	cursor:default;
+}
+
+.footer:hover {
+	opacity:1;
+}
+
