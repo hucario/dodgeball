@@ -67,6 +67,12 @@ const bossNames = ['Arnold, destroyer of worlds', 'Vermin Supreme', '[insert you
 
 var c = {"m":{"italics":"\x1b[3m","reset":"\x1b[0m","bright":"\x1b[1m","dim":"\x1b[2m","underscore":"\x1b[4","blink":"\x1b[5m","reverse":"\x1b[7m","hidden":"\x1b[8m","m":"\x1b["},"f":{"black":"\x1b[30m","red":"\x1b[31m","green":"\x1b[32m","yellow":"\x1b[33m","blue":"\x1b[34m","purple":"\x1b[35m","cyan":"\x1b[36","white":"\x1b[37m"},"b":{"black":"\x1b[40m","red":"\x1b[41m","green":"\x1b[42m","yellow":"\x1b[43m","blue":"\x1b[44m","purple":"\x1b[45m","cyan":"\x1b[46","white":"\x1b[47m"}};
 
+for (key in c) {
+	for (key2 in c[key]) {
+		c[key][key2] = "";
+	}
+}
+
 var clients = {};
 var bossmode = false;
 var custom = {
