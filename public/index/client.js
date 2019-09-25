@@ -426,14 +426,11 @@ function renderStuff() {
 			
 			} else {
 				if (otherPlayers[key].tsl < 10000) {
-					try {
 					otherPlayers[key].element.classList.add('deadish');
 					otherPlayers[key].element.style.opacity=0;
 					otherPlayers[key].element.innerText='(Disconnected)\n'+otherPlayers[key].namea;
-					} catch(e) {}
 				} else {
-				
-
+					field.removeChild(otherPlayers[key].element);				
 				}
 			}
 		} /* end of giant if */
