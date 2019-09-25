@@ -397,12 +397,14 @@ function renderStuff() {
 			
 			} else {
 				if (otherPlayers[key].tsl < 10000) {
-					listings[key].classList.add('deadish');
-					listings[key].style.opacity=0;
-					listings[key].playerPreview.innerText='(Disconncted)\n'+otherPlayers[key].namea;
-					otherPlayers[key].element.classList.add('deadish');
-					otherPlayers[key].element.style.opacity=0;
-					otherPlayers[key].element.innerText='(Disconnected)\n'+otherPlayers[key].namea;
+					try {
+						listings[key].classList.add('deadish');
+						listings[key].style.opacity=0;
+						listings[key].playerPreview.innerText='(Disconncted)\n'+otherPlayers[key].namea;
+						otherPlayers[key].element.classList.add('deadish');
+						otherPlayers[key].element.style.opacity=0;
+						otherPlayers[key].element.innerText='(Disconnected)\n'+otherPlayers[key].namea;
+					} catch(e) {}
 				} else if (otherPlayers[key].tsl > 10000&&otherPlayers[key].tsl < 12000) {
 					listings[key].style.height='0px';
 					field.removeChild(otherPlayers[key].element);
