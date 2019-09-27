@@ -691,6 +691,14 @@ app.post('/con', function(req, res) {
 
 });
 
+app.post('/spamfactor', (req, res) => {
+	if (Number(req.body.data) !== NaN) {
+		gameConfig.spamfactor = Number(req.body.data);
+	}
+	
+	res.send(true);
+});
+
 app.post('*', function(req,res) {
 	con.info('Got a POST request at '+req.path+', but there\'s nothing there.');
 	res.status(404).send();
