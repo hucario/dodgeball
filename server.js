@@ -263,6 +263,11 @@ app.get('/', (req, res) => {
 
 ezRoute('/cpanel', 'cpanel');
 
+app.post('/boss', (req,res) => {
+	res.send();
+	makeABoss();
+});
+
 app.get('/cpanel.js', (req, res) => {
 	res.sendFile(__dirname+"/private/cpanel.js");
 });
